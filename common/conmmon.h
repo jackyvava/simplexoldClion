@@ -93,4 +93,4 @@ template<class T> using Array=std::vector<T>;
 template<class T> using ArrayPtr=std::shared_ptr<Array<T> >;
 using size_type=Array<int>::size_type;
 
-#endif //conmmon_h
+#endif //conmmon_h 123
