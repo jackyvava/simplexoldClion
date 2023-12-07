@@ -1,9 +1,10 @@
-//
-// Created by zhangjie on 2023/12/7.
-//
-
-#ifndef SIMPLEXOLDCLION_CONSTANTS_H
-#define SIMPLEXOLDCLION_CONSTANTS_H
+//////////////////////////////////////////////////////////////////////////
+// Constants declaration
+// Copyright (c) (2018-), Bo Zhu
+// This file is part of SimpleX, whose distribution is governed by the LICENSE file.
+//////////////////////////////////////////////////////////////////////////
+#ifndef __Constants_h__
+#define __Constants_h__
 #include "Common.h"
 
 ////constants
@@ -21,4 +22,4 @@ const real one_over_pi=(real)1/pi;
 const real one_over_sqrt_two=(real)1/sqrt_two;
 const real one_over_sqrt_three=(real)1/sqrt_three;
 
-#endif //SIMPLEXOLDCLION_CONSTANTS_H
+#endif

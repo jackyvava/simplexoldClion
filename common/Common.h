@@ -1,9 +1,10 @@
-//
-// Created by zhangjie on 2023/12/7.
-//
-
-#ifndef SIMPLEXOLDCLION_COMMON_H
-#define SIMPLEXOLDCLION_COMMON_H
+//////////////////////////////////////////////////////////////////////////
+// Common header
+// Copyright (c) (2018-), Bo Zhu
+// This file is part of SimpleX, whose distribution is governed by the LICENSE file.
+//////////////////////////////////////////////////////////////////////////
+#ifndef __Common_h__
+#define __Common_h__
 #include "Eigen/Dense"
 #include "Eigen/Geometry"
 #include <vector>
@@ -62,14 +63,14 @@ using Vector5##t=Eigen::Matrix<type,5,1>;;		\
 using Vector6##t=Eigen::Matrix<type,6,1>;;		\
 using Vector7##t=Eigen::Matrix<type,7,1>;;		\
 using Vector8##t=Eigen::Matrix<type,8,1>;;		\
-using Vector9##t=Eigen::Matrix<type,9,1>;;
+using Vector9##t=Eigen::Matrix<type,9,1>;;		
 
 #define Declare_Eigen_Matrix_Types(type,t)		\
 using Matrix1##t=Eigen::Matrix<type,1,1>;       \
 using Matrix2##t=Eigen::Matrix2##t;             \
 using Matrix3##t=Eigen::Matrix3##t;             \
 using Matrix4##t=Eigen::Matrix4##t;             \
-using MatrixX##t=Eigen::MatrixX##t;
+using MatrixX##t=Eigen::MatrixX##t;             
 
 #ifdef USE_FLOAT
 Declare_Eigen_Types(float,f)
@@ -148,37 +149,28 @@ enum DataHolder { UNKNOWN, HOST, DEVICE };
 
 template<class T, int d>
 inline Vector<T, d> Fit_Vector(T a, T b, T c = (T)0) {
-    Vector<T, d> v = Vector<T, d>::Zero();
-    if (d > 0) v(0) = a;
-    if (d > 1) v(1) = b;
-    if (d > 2) v(2) = c;
-    return v;
+	Vector<T, d> v = Vector<T, d>::Zero();
+	if (d > 0) v(0) = a;
+	if (d > 1) v(1) = b;
+	if (d > 2) v(2) = c;
+	return v;
 }
 template<class T, int d>
 inline Vector<T, d> Fit_Vector(Vector<T, 2> v0, T fill=(T)0) {
-    Vector<T, d> v = Vector<T, d>::Zero();
-    if (d > 0) v(0) = v0(0);
-    if (d > 1) v(1) = v0(1);
-    if (d > 2) v(2) = fill;
-    return v;
+	Vector<T, d> v = Vector<T, d>::Zero();
+	if (d > 0) v(0) = v0(0);
+	if (d > 1) v(1) = v0(1);
+	if (d > 2) v(2) = fill;
+	return v;
 }
 
 template<class T,int d>
 inline Vector<T, d> Fit_Vector(Vector<T, 3> v0, T fill = (T)0) {
-    Vector<T, d> v = Vector<T, d>::Zero();
-    if (d > 0) v(0) = v0(0);
-    if (d > 1) v(1) = v0(1);
-    if (d > 2) v(2) = v0(2);
-    return v;
+	Vector<T, d> v = Vector<T, d>::Zero();
+	if (d > 0) v(0) = v0(0);
+	if (d > 1) v(1) = v0(1);
+	if (d > 2) v(2) = v0(2);
+	return v;
 }
 
-
-
-
-
-
-
-
-
-
-#endif //SIMPLEXOLDCLION_COMMON_H
+#endif
