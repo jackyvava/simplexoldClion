@@ -340,24 +340,24 @@ template void Build_Grid_Cell_Matrix_Bijective_Mapping<d>(const Grid<d>&,std::fu
 Inst_Helper(2);Inst_Helper(3);
 #undef Inst_Helper
 
-template<class T_ARRAY,class T,int d> void Convert_To_Field(const T_ARRAY& u,Field<Vector<T,d>,d>& output)
+template<class T_ARRAY,class T,int d> void Convert_To_Field0(const T_ARRAY& u,Field<Vector<T,d>,d>& output)
 {
     const int n=(int)output.array.size();
     for(int i=0;i<n;i++){Vector<T,d> v;for(int j=0;j<d;j++)v[j]=u[i*d+j];output.array[i]=v;}
 }
 #define Inst_Helper(T_ARRAY,T,d) \
-template void Convert_To_Field<T_ARRAY,T,d>(const T_ARRAY&,Field<Vector<T,d>,d>&);
+template void Convert_To_Field0<T_ARRAY,T,d>(const T_ARRAY&,Field<Vector<T,d>,d>&);
 Inst_Helper(VectorN<real>,real,2);Inst_Helper(VectorN<real>,real,3);
 Inst_Helper(Array<real>,real,2);Inst_Helper(Array<real>,real,3);
 #undef Inst_Helper
 
-template<class T_ARRAY,class T,int d> void Convert_To_Field1(const T_ARRAY& u,Field<Vector<T,d>,1>& output)
+template<class T_ARRAY,class T,int d> void Convert_To_Field01(const T_ARRAY& u,Field<Vector<T,d>,1>& output)
 {
     const int n=(int)u.size()/d;output.Resize(n);
     for(int i=0;i<n;i++){Vector<T,d> v;for(int j=0;j<d;j++)v[j]=u[i*d+j];output.array[i]=v;}
 }
 #define Inst_Helper(T_ARRAY,T,d) \
-template void Convert_To_Field1<T_ARRAY,T,d>(const T_ARRAY&,Field<Vector<T,d>,1>&);
+template void Convert_To_Field01<T_ARRAY,T,d>(const T_ARRAY&,Field<Vector<T,d>,1>&);
 Inst_Helper(VectorN<real>,real,2);Inst_Helper(VectorN<real>,real,3);
 Inst_Helper(Array<real>,real,2);Inst_Helper(Array<real>,real,3);
 #undef Inst_Helper
