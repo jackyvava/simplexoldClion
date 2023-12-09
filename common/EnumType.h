@@ -25,7 +25,7 @@ enum class SolverType : unsigned char
 
 enum class GridType : unsigned short
 {
-    //TODO: Mixed grid? and also should the name be changed to CellType?
+    // TODO: Mixed grid? and also should the name be changed to CellType?
     Air,
     Fluid,
     Solid,			// if use multiple solids, can assign value (unsigned char)GridType::Solid + i to solid i

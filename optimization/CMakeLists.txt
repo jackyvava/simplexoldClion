@@ -11,3 +11,5 @@ target_include_directories(optimization PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # 链接 Eigen 库
 target_link_libraries(optimization Eigen3::Eigen)
+
+target_link_libraries(optimization  common)

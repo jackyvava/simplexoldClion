@@ -5,7 +5,6 @@
 #ifndef SIMPLEXOLDCLION_TEST_H
 #define SIMPLEXOLDCLION_TEST_H
 
-
 class test {
 
 };

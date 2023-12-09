@@ -1,0 +1,13 @@
+//
+// Created by zhangjie on 2023/12/9.
+//
+
+#ifndef SIMPLEXOLDCLION_AUXFUNCCUDA_CUH
+#define SIMPLEXOLDCLION_AUXFUNCCUDA_CUH
+
+class AuxFuncCuda {
+
+};
+
+
+#endif //SIMPLEXOLDCLION_AUXFUNCCUDA_CUH
