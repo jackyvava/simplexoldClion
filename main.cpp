@@ -11,6 +11,6 @@ using Transform3d=Eigen::Transform<double,3,Eigen::Affine>;
 
 int main() {
     // 创建一个二维浮点数仿射变换矩阵
-    std::cout<<"hello";
+    std::cout<<"hello"<< std::endl;
     return 0;
 }
