@@ -37,7 +37,7 @@ int ArbitraryArrayPointer::Delete_Elements(const Array<bool>& is_deleted)
 
 bool ArbitraryArrayPointer::Write_Binary(const std::string& file_name)
 {
-	return data_ptr->Write_Binary(file_name);
+	return data_ptr->Write_Binary(file_name);//
 }
 
 bool ArbitraryArrayPointer::Read_Binary(const std::string& file_name)
