@@ -4,7 +4,9 @@
 file(GLOB GEOMETRY_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 
 # 创建 common 库，包含所有源文件
-add_library(geometry ${GEOMETRY_SOURCES})
+add_library(geometry ${GEOMETRY_SOURCES}
+        BoundaryCondition.cpp
+        BoundaryCondition.h)
 
 # 将 common 文件夹添加到项目中
 

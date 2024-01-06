@@ -5,7 +5,6 @@ file(GLOB COMMON_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURC
 
 # 创建 common 库，包含所有源文件
 add_library(common ${COMMON_SOURCES}
-
 )
 # 将 common 文件夹添加到项目中
 target_include_directories(common PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
