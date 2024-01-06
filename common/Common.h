@@ -24,7 +24,7 @@ using Transform2d=Eigen::Transform<double,2,Eigen::Affine>;
 using Transform3d=Eigen::Transform<double,3,Eigen::Affine>;
 
 #define Declare_Eigen_Types(my_type,t)  \
-using real=my_type;                     \
+using real = my_type;                     \
 using Vector1=Eigen::Matrix<real,1,1>;  \
 using Vector2=Eigen::Vector2##t;        \
 using Vector3=Eigen::Vector3##t;        \

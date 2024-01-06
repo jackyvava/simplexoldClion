@@ -1,6 +1,7 @@
 
 #include<Eigen/Geometry>
 #include <iostream>
+#include "nanoflann/nanoflann.hpp"
 
 
 

@@ -1,10 +1,16 @@
-project(simplexoldClion CUDA CXX)
 cmake_minimum_required(VERSION 3.25)
+
+project(simplexoldClion CUDA CXX)
+set(CMAKE_TOOLCHAIN_FILE "E:/programe/VcPKG/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 set(CMAKE_CXX_STANDARD 17)
 find_package(Eigen3 CONFIG REQUIRED)
 find_package(yaml-cpp CONFIG REQUIRED)
 find_package(CUDAToolkit REQUIRED)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ext)
+
+
 # 源文件目录
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 

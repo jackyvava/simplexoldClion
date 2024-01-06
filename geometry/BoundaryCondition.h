@@ -63,7 +63,7 @@ public:
 
     void Build_Acceleration_Arrays()
     {
-        int psi_N_n= psi_N_values.size();
+        int psi_N_n= (int)psi_N_values.size();
         psi_N_key_array.resize(psi_N_n);
         psi_N_val_array.resize(psi_N_n);
         int i=0;for(auto p:psi_N_values){psi_N_key_array[i]=p.first;psi_N_val_array[i]=p.second;i++;}

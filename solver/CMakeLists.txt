@@ -4,10 +4,19 @@
 file(GLOB SOLVER_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 
 # 创建 common 库，包含所有源文件
-add_library(solver ${SOLVER_SOURCES})
+add_library(solver ${SOLVER_SOURCES}
+        MultiGrid.cpp
+        MultiGrid.h
+        GeometricMultiGrid.cpp
+        GeometricMultiGrid.h
+        ColorGrid.h
+        GmgPcgSolverCPU.cpp
+        GmgPcgSolverCPU.h)
 
 # 将 common 文件夹添加到项目中
 target_include_directories(solver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # 链接 Eigen 库
 target_link_libraries(solver Eigen3::Eigen)
+
+target_link_libraries(solver  common geometry optimization physics)
